@@ -1,0 +1,21 @@
+create database office_equipment;
+CREATE TABLE offices (
+    officeCode INT PRIMARY KEY,
+    city VARCHAR(50),
+    phone VARCHAR(50),
+    addressLine1 VARCHAR(100),
+    addressLine2 VARCHAR(100),
+    state VARCHAR(50),
+    country VARCHAR(50),
+    postalCode VARCHAR(20),
+    territory VARCHAR(20)
+);
+INSERT INTO offices (officeCode, city, phone, addressLine1, addressLine2, state, country, postalCode, territory)
+VALUES
+(1, 'New York', '212-555-1234', '123 5th Ave', NULL, 'NY', 'USA', '10001', 'NA'),
+(2, 'London', '020-1234-5678', '221B Baker St', NULL, NULL, 'UK', 'NW16XE', 'EMEA'),
+(3, 'Tokyo', '03-1234-5678', '1-1-1 Shibuya', 'Shibuya Tower', NULL, 'Japan', '150-0002', 'APAC'),
+(4, 'Sydney', '02-9876-5432', '45 George St', 'Suite 5A', 'NSW', 'Australia', '2000', 'APAC'),
+(5, 'Paris', '01-2345-6789', '10 Rue de Rivoli', NULL, 'Ile-de-France', 'France', '75001', 'EMEA');
+SELECT * 
+FROM offices;
