@@ -1,0 +1,23 @@
+CREATE DATABASE pizza_orders;
+
+USE pizza_orders;
+CREATE TABLE orders (
+    orderID INT AUTO_INCREMENT PRIMARY KEY,
+    orderName VARCHAR(100),
+    orderDate DATE,
+    requiredDate DATE,
+    shippedDate DATE,
+    status VARCHAR(50)
+);
+
+INSERT INTO orders (orderName, orderDate, requiredDate, shippedDate, status)
+VALUES
+('Pepperoni Pizza', '2025-04-10', '2025-04-10', NULL, 'In Process'),
+('Veggie Supreme', '2025-04-09', '2025-04-09', '2025-04-09', 'Shipped'),
+('BBQ Chicken Pizza', '2025-04-08', '2025-04-08', '2025-04-08', 'Shipped'),
+('Margherita Pizza', '2025-04-07', '2025-04-08', NULL, 'In Process'),
+('Hawaiian Pizza', '2025-04-06', '2025-04-07', '2025-04-07', 'Shipped');
+SELECT orderDate, requiredDate, status
+FROM orders
+WHERE status = 'In Process'
+ORDER BY orderDate DESC;
