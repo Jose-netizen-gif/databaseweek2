@@ -1,3 +1,4 @@
+create database payroll;
 CREATE TABLE payments (
     customerNumber INT NOT NULL,
     checkNumber VARCHAR(50) NOT NULL,
