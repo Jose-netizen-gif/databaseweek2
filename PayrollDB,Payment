@@ -1,0 +1,17 @@
+CREATE TABLE payments (
+    customerNumber INT NOT NULL,
+    checkNumber VARCHAR(50) NOT NULL,
+    paymentDate DATE NOT NULL,
+    amount DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY (customerNumber, checkNumber)
+);
+INSERT INTO payments (customerNumber ,checkNumber, paymentDate, amount)
+VALUES
+('001','CHK001', '2025-04-10', 55000.00),
+('002','CHK002', '2025-04-10', 60000.00),
+('003','CHK003', '2025-04-10', 75000.00),
+('004','CHK004', '2025-04-10', 52000.00),
+('005','CHK005', '2025-04-10', 48000.00);
+
+SELECT checkNumber, paymentDate, amount
+FROM payments;
