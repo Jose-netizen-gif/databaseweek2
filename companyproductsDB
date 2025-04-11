@@ -1,0 +1,19 @@
+create database company_products;
+CREATE TABLE products (
+    productCode INT PRIMARY KEY,
+    productName VARCHAR(100),
+    quantityInStock INT,
+    buyPrice DECIMAL(10, 2)
+);
+INSERT INTO products (productCode, productName, quantityInStock, buyPrice)
+VALUES
+(7, 'Product A', 150, 10.99),
+(8, 'Product B', 100, 8.50),
+(9, 'Product C', 250, 5.75),
+(10, 'Product D', 90, 12.30),
+(11, 'Product E', 200, 7.95),
+(12, 'Product F', 300, 9.50);
+SELECT productName, quantityInStock
+FROM products
+ORDER BY buyPrice ASC
+LIMIT 5;
